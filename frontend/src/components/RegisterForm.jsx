@@ -36,7 +36,9 @@ function RegisterForm() {
         } catch (error) {
             console.error(error);
             alert(error.response?.data?.detail || "Registration failed. Please try again.");
-        } 
+        } finally {
+            setLoading(false)
+        }
     };
             
 
